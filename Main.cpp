@@ -1,12 +1,12 @@
 #include <iostream>
+#include "Fraction.h"
 
-#include "Car.h"
+int main(){
+	const Fraction half{1,2}, one{1};
+	std::cout << (std::string)half << std::endl;
+	Fraction golden = 1+ 1/(1 + 1/(1+one));
+	std::cout << (std::string)golden << std::endl;
+	std::cout << (one > half) << std::endl;
+	std::cout << half << std::endl;
 
-int main() {
-	Engine* engine = new Engine();
-	Rack rack;
-	Wheel wheels[4];
-	Car* car = new Car(engine, wheels, rack);
-
-	delete car;
 }
